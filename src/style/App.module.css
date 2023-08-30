@@ -1,0 +1,28 @@
+.appContainer {
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 4rem;
+
+    height: 100vh;
+    width: 100vw;
+
+    background: linear-gradient(45deg, transparent 24.5%, #090909 24.5%, #090909 25.5%, transparent 25.5%, transparent 74.5%, #090909 74.5%, #090909 75.5%, transparent 75.5%),
+              linear-gradient(-45deg, transparent 24.5%, #090909 24.5%, #090909 25.5%, transparent 25.5%, transparent 74.5%, #090909 74.5%, #090909 75.5%, transparent 75.5%);
+    background-size: 5rem 5rem;
+}
+
+.title {
+    font-size: 48px;
+    font-weight: 600;
+    letter-spacing: -1.2px;
+}
+
+.highlight {
+    background: linear-gradient(to right, #f88660, #ff4c88);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
