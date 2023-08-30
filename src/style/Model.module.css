@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+.button {
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0.5rem;
+    border-bottom: 1px solid rgba(212, 212, 212, 0.2);
+
+    width: 100%;
+}
+
+.button:hover {
+    background-color: #171717;
+    border-radius: 0.6rem 0.6rem 0 0;
+}
+
+.icon {
+    font-size: 2rem;
+}
+
+.text {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    font-weight: 600;
+    margin-top: 0.3rem;
+}
