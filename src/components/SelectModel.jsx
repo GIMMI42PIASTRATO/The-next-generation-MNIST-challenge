@@ -1,25 +1,25 @@
 import Model from "./Model";
 import style from "../style/SelectModel.module.css";
 import modelsInfo from "../data/modelsInfo";
-import { useState } from "react";
+import { useContext } from "react";
+import { ThemeContext } from "../App";
 
 export default function SelectModel() {
-    const [isClickedN1, setIsClickedN1] = useState(true);
-    const [isClickedN2, setIsClickedN2] = useState(false);
+    const themeStateContext = useContext(ThemeContext);
 
     return (
         <div className={style.modelsContainer}>
             <Model
                 data={modelsInfo.EMNISTInfo}
-                isClicked={isClickedN1}
-                setIsClicked={setIsClickedN1}
-                removeClick={setIsClickedN2}
+                isClicked={themeStateContext.isClickedN1}
+                setIsClicked={themeStateContext.setIsClickedN1}
+                removeClick={themeStateContext.setIsClickedN2}
             />
             <Model
                 data={modelsInfo.fashionMNIST}
-                isClicked={isClickedN2}
-                setIsClicked={setIsClickedN2}
-                removeClick={setIsClickedN1}
+                isClicked={themeStateContext.isClickedN2}
+                setIsClicked={themeStateContext.setIsClickedN2}
+                removeClick={themeStateContext.setIsClickedN1}
             />
         </div>
     );
