@@ -1,4 +1,5 @@
 import SelectModel from "./SelectModel";
+import Playground from "./Playground";
 import style from "../style/Box.module.css";
 import { useContext } from "react";
 import { ThemeContext } from "../App";
@@ -22,7 +23,7 @@ export default function Box() {
                 )}
                 <div className={style.fromBox}>
                     <SelectModel />
-                    <div>Model</div>
+                    <Playground />
                 </div>
             </div>
         </div>
