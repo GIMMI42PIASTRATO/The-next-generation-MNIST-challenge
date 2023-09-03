@@ -1,4 +1,5 @@
 import Description from "./Description";
+import Input from "./Input";
 import descriptionsInfo from "../data/descriptionsInfo";
 import { useContext } from "react";
 import { ThemeContext } from "../App";
@@ -27,6 +28,7 @@ export default function Playground() {
                     {descriptionsInfo.FashionMNIST.hightLightWord}
                 </Description>
             )}
+            <Input />
         </div>
     );
 }

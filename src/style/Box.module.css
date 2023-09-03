@@ -9,8 +9,8 @@
 }
 
 .relativeContainer {
-    min-width: 1022px;
-    min-height: 589px;
+    width: 1022px;
+    height: 589px;
     position: relative;
 }
 

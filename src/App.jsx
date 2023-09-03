@@ -3,6 +3,7 @@ import React from "react";
 import Box from "./components/Box";
 import Title from "./components/Title";
 import style from "./style/App.module.css";
+import { Toaster } from "react-hot-toast";
 
 export const ThemeContext = React.createContext();
 
@@ -23,6 +24,7 @@ function App() {
                 <Title />
                 <Box />
             </ThemeContext.Provider>
+            <Toaster position="bottom-center" reverseOrder={false} />
         </div>
     );
 }

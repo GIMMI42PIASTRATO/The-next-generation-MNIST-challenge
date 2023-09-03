@@ -7,7 +7,7 @@ const descriptionsInfo = {
         color2: "#ff4c88",
         style: {
             backgroundImage: "linear-gradient(to right, #f88660, #ff4c88)",
-            backgroundSize: "8%",
+            backgroundSize: "18%",
             backgroundRepeat: "no-repeat",
             backgroundClip: "text",
             color: "transparent",
@@ -26,7 +26,7 @@ const descriptionsInfo = {
         color2: "#ff6d2e",
         style: {
             backgroundImage: "linear-gradient(to right, #ffe14c, #ff6d2e)",
-            backgroundSize: "10.5%",
+            backgroundSize: "23%",
             backgroundRepeat: "no-repeat",
             backgroundClip: "text",
             color: "transparent",

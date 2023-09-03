@@ -1,6 +1,7 @@
 .container {
     padding-left: 1rem;
     padding-right: 1rem;
+    width: 50%;
 }
 
 .highlight {
@@ -20,8 +21,10 @@
 }
 
 .description {
+    display: flex;
     color: #9ca3ab;
     font-size: 16px;
     font-weight: 500;
     margin-top: 0.25rem;
+    line-height: 1.5;
 }
