@@ -10,7 +10,7 @@ const DrawingComponent = () => {
 
     useEffect(() => {
         if (canvas.current) {
-            canvas.current._canvas.style.borderRadius = "15px";
+            canvas.current._canvas.style.borderRadius = "0.5rem";
         }
     }, []);
 
@@ -19,6 +19,7 @@ const DrawingComponent = () => {
         //Inviare l'url all'api
         console.log(imageURL);
         await notify();
+        canvas.current.clear();
     };
 
     return (

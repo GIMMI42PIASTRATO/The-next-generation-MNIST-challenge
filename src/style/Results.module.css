@@ -1,0 +1,20 @@
+.result {
+    color: #9ca3ab;
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.highligth {
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1.5;
+    margin-top: 1rem;
+}
+
+.probability {
+    color: #9ca3ab;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5;
+}

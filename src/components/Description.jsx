@@ -1,6 +1,6 @@
 import PropsTypes from "prop-types";
 import style from "../style/Description.module.css";
-
+import Results from "./Results";
 export default function Description({
     description,
     children,
@@ -16,13 +16,20 @@ export default function Description({
 
     return (
         <div className={style.container}>
-            <div className={style.iconContainer} style={activeStyle.iconStyle}>
-                {icon}
+            <div>
+                <div
+                    className={style.iconContainer}
+                    style={activeStyle.iconStyle}
+                >
+                    {icon}
+                </div>
+                <div className={style.highlight} style={activeStyle.style}>
+                    {children}
+                </div>
+                <div className={style.description}>{description}</div>
             </div>
-            <div className={style.highlight} style={activeStyle.style}>
-                {children}
-            </div>
-            <div className={style.description}>{description}</div>
+
+            <Results />
         </div>
     );
 }
