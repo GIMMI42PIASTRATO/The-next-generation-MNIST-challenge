@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { ThemeContext } from "../App";
 import style from "../style/Title.module.css";
-import { TbLink } from "react-icons/tb";
+import InputApi from "./InputApi";
 
 export default function Title() {
     const themeStateContext = useContext(ThemeContext);
@@ -30,19 +30,7 @@ export default function Title() {
                     command line.
                 </div>
             )}
-            <div className={style.labelContainer}>
-                <div className={style.label}>API link</div>
-                <div className={style.flexContainer}>
-                    <div className={style.inputContainer}>
-                        <TbLink className={style.icon} />
-                        <span style={{ color: "black" }}>|</span>
-                        <input type="text" placeholder="http://apilink" />
-                    </div>
-                    <div className={style.buttonContainer}>
-                        <div>Connect</div>
-                    </div>
-                </div>
-            </div>
+            <InputApi />
         </div>
     );
 }
