@@ -2,7 +2,7 @@ import { useRef } from "react";
 import SignatureCanvas from "react-signature-canvas";
 import style from "../style/DrawingComponent.module.css";
 import { TbSend } from "react-icons/tb";
-import notify from "../data/toastNotify";
+import { notify } from "../data/toastNotify";
 import { useEffect } from "react";
 
 const DrawingComponent = () => {

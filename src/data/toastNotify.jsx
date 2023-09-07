@@ -8,11 +8,16 @@ const test = () => {
     });
 };
 
-const notify = async () =>
+export const notify = async () =>
     await toast.promise(test(), {
         loading: "Loading",
         success: "Image sent",
         error: "Error while sending",
     });
 
-export default notify;
+export const notify1 = async () =>
+    await toast.promise(test(), {
+        loading: "Loading",
+        success: "Connected",
+        error: "Connection failed",
+    });
