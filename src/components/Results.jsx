@@ -17,6 +17,8 @@ export default function Results() {
                         backgroundRepeat: "no-repeat",
                         backgroundClip: "text",
                         color: "transparent",
+                        WebkitBackgroundClip: "text",
+                        WebkitTextFillColor: "transparent"
                     }}
                 >
                     Interpretation
@@ -31,6 +33,8 @@ export default function Results() {
                         backgroundRepeat: "no-repeat",
                         backgroundClip: "text",
                         color: "transparent",
+                        WebkitBackgroundClip: "text",
+                        WebkitTextFillColor: "transparent"
                     }}
                 >
                     Interpretation
