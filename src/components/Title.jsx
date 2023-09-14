@@ -20,9 +20,11 @@ export default function Title() {
                         className={style.highlight}
                         style={{
                             background:
-                                "linear-gradient(to right, #ffe14c, #ff6d2e)",
+                                "-webkit-linear-gradient(#ffe14c, #ff6d2e)",
                             backgroundClip: "text",
                             color: "transparent",
+                            WebkitBackgroundClip: "text",
+                            WebkitTextFillColor: "transparent"
                         }}
                     >
                         next-generation
