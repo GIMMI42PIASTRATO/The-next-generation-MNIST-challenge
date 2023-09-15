@@ -1,0 +1,51 @@
+.container {
+    margin: 1rem 0;
+    padding: .6em 1.2em;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 10ms ease-in-out;
+
+    div {
+        text-align: center;
+        font-weight: 700;
+        font-style: italic;
+        cursor: pointer;
+        user-select: none;
+    }
+}
+
+.default {
+    background-color: transparent;
+    border: 1px solid white;
+
+    &:active {
+        background-color: #00000040;
+    }
+}
+
+.submit {
+    background-color: #57f28820;
+    border: 1px solid #57F287;
+
+    &:active {
+        background-color: #57f28840;
+    }
+}
+
+.remove {
+    background-color: #ED424520;
+    border: 1px solid #ED4245;
+
+    &:active {
+        background-color: #ED424540;
+    }
+}
+
+.warning {
+    background-color: #FEE75C20;
+    border: 1px solid #FEE75C;
+
+    &:active {
+        background-color: #FEE75C40;
+    }
+}
