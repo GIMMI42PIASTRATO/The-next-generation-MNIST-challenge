@@ -1,16 +1,17 @@
+import PropsTypes from "prop-types";
 import DrawingComponent from "./DrawingComponent";
 import style from "../style/Input.module.css";
 import { useContext } from "react";
 import { ThemeContext } from "../App";
 
-export default function Input() {
+export default function Input({ setResults }) {
     const themeStateContext = useContext(ThemeContext);
 
     return (
         <>
             {themeStateContext.isClickedN1 ? (
                 <div className={style.container}>
-                    <DrawingComponent />
+                    <DrawingComponent setResults={setResults}/>
                 </div>
             ) : (
                 <div>
@@ -19,4 +20,8 @@ export default function Input() {
             )}
         </>
     );
+}
+
+Input.propTypes = {
+    setResults: PropsTypes.func
 }
