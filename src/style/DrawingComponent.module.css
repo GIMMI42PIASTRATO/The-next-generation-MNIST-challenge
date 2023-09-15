@@ -13,6 +13,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 1rem;
 }
 
 .button {
@@ -28,4 +29,9 @@
     font-size: 1rem;
     color: black;
     gap: .5rem;
+}
+
+.signatureCanvas {
+    background-color: black;
+    border: solid 2px white;
 }
