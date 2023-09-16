@@ -8,20 +8,30 @@ import { useContext } from "react";
 import { ThemeContext } from "../App";
 import Button from "./Button/Button"
 
-const DrawingComponent = ({ setResults }) => {
+const DrawingComponent = ({ setEMNISTResult, setMNISTResult }) => {
     const canvas = useRef(null);
     const themeStateContext = useContext(ThemeContext);
-
+    const  { isClickedN1, isClickedN2 } = themeStateContext
+    
     useEffect(() => {
         if (canvas.current) {
             canvas.current._canvas.style.borderRadius = "0.5rem";
         }
     }, []);
+    
+    useEffect(() => {
+        canvas.current.clear();
+    }, [isClickedN1, isClickedN2])
 
     const handleClick = async () => {
         const predictedData = await handleSendImage(canvas, themeStateContext)
         console.log("↩️", predictedData);
-        setResults(predictedData)
+
+        if (isClickedN1) {
+            setEMNISTResult(predictedData)
+        } else if (isClickedN2) {
+            setMNISTResult(predictedData)
+        }
     }
 
     const deleteCanvas = () => {
@@ -52,7 +62,8 @@ const DrawingComponent = ({ setResults }) => {
 };
 
 DrawingComponent.propTypes = {
-    setResults: PropsTypes.func
+    setMNISTResult: PropsTypes.func,
+    setEMNISTResult: PropsTypes.func
 }
 
 export default DrawingComponent;

@@ -26,12 +26,11 @@ export const handleSendImage = async (canvas, themeStateContext) => {
         } else if (isClickedN2) {
             console.log("🟩")
             reponse = await axios.post(`${apiLink2}api/predict`, buffer);
-            reponse.data.predicted.toString()
         }
         console.log("🐦", reponse)
 
         const { data } = reponse;
-        const predictedData = data.predicted
+        const predictedData = data.predicted.toString();
         console.log("🔢", predictedData);
 
         await notify(true);
