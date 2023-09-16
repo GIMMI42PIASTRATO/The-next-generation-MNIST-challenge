@@ -9,14 +9,15 @@ import { useState } from "react";
 
 export default function Playground() {
     const themeStateContext = useContext(ThemeContext);
-    const [result, setResult] = useState("b")
-    console.log("Result ⚪", result);
+    const [EMNISTResult, setEMNISTResult] = useState("b")
+    const [MNISTResult, setMNISTResult] = useState("1")
+    console.log("Result ⚪", EMNISTResult);
     
     return (
         <div className={style.playgroundContainer}>
             {themeStateContext.isClickedN1 ? (
                 <Description
-                    result={result}
+                    result={EMNISTResult}
                     description={descriptionsInfo.EMNIST.description}
                     activeStyle={descriptionsInfo.EMNIST}
                     icon={<HiPencilAlt style={{ fontSize: "2.5rem" }} />}
@@ -25,7 +26,7 @@ export default function Playground() {
                 </Description>
             ) : (
                 <Description
-                    result={result}
+                    result={MNISTResult}
                     description={descriptionsInfo.FashionMNIST.description}
                     activeStyle={descriptionsInfo.FashionMNIST}
                     icon={<HiUpload style={{ fontSize: "2.5rem" }} />}
@@ -33,7 +34,7 @@ export default function Playground() {
                     {descriptionsInfo.FashionMNIST.hightLightWord}
                 </Description>
             )}
-            <Input setResults={setResult}/>
+            <Input setEMNISTResult={setEMNISTResult} setMNISTResult={setMNISTResult}/>
         </div>
     );
 }
