@@ -11,7 +11,7 @@ export default function Title() {
             {themeStateContext.isClickedN1 ? (
                 <div className={style.title}>
                     The <span className={style.highlight}>next-generation</span>{" "}
-                    command line.
+                    *NIST tester.
                 </div>
             ) : (
                 <div className={style.title}>
@@ -29,7 +29,7 @@ export default function Title() {
                     >
                         next-generation
                     </span>{" "}
-                    command line.
+                    *NIST tester.
                 </div>
             )}
             <InputApi />
