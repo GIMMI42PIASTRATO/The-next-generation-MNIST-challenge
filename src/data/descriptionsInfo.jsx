@@ -2,7 +2,7 @@ const descriptionsInfo = {
     EMNIST: {
         hightLightWord: "Write",
         description:
-            "Write any number or letter (upper or lower case), send it to test the Neural Network",
+            "Write letter (upper or lower case), send it to test the Neural Network.",
         color1: "#f88660",
         color2: "#ff4c88",
         style: {
@@ -22,9 +22,9 @@ const descriptionsInfo = {
     },
 
     FashionMNIST: {
-        hightLightWord: "Upload",
+        hightLightWord: "Write",
         description:
-            "Loads an image of a clothing item accepted by the dataset (the image must be 1:1), send it to test the Neural Network",
+            "Write any number from 0 to 9 and send it to the Neural Network to tests it.",
         color1: "#ffe14c",
         color2: "#ff6d2e",
         style: {

@@ -1,50 +1,69 @@
+import PropsTypes from "prop-types";
 import { useRef } from "react";
 import SignatureCanvas from "react-signature-canvas";
 import style from "../style/DrawingComponent.module.css";
-import { TbSend } from "react-icons/tb";
-import { notify } from "../data/toastNotify";
 import { useEffect } from "react";
+import { handleSendImage } from "./handleSendImage";
+import { useContext } from "react";
+import { ThemeContext } from "../App";
+import Button from "./Button/Button"
 
-const DrawingComponent = () => {
+const DrawingComponent = ({ setEMNISTResult, setMNISTResult }) => {
     const canvas = useRef(null);
-
+    const themeStateContext = useContext(ThemeContext);
+    const  { isClickedN1, isClickedN2 } = themeStateContext
+    
     useEffect(() => {
         if (canvas.current) {
             canvas.current._canvas.style.borderRadius = "0.5rem";
         }
     }, []);
-
-    const handleSendImage = async () => {
-        const imageURL = canvas.current.toDataURL("PNG");
-        //Inviare l'url all'api
-        console.log(imageURL);
-        await notify();
+    
+    useEffect(() => {
         canvas.current.clear();
-    };
+    }, [isClickedN1, isClickedN2])
 
+    const handleClick = async () => {
+        const predictedData = await handleSendImage(canvas, themeStateContext)
+        console.log("↩️", predictedData);
+
+        if (isClickedN1) {
+            setEMNISTResult(predictedData)
+        } else if (isClickedN2) {
+            setMNISTResult(predictedData)
+        }
+    }
+
+    const deleteCanvas = () => {
+        canvas.current.clear();
+    }   
+    
     return (
         <>
             <div className={style.canvasContainer}>
                 <SignatureCanvas
                     ref={(ref) => (canvas.current = ref)}
                     penColor="white"
-                    backgroundColor="#161a1d"
-                    minWidth={7}
-                    maxWidth={7}
+                    minWidth={10}
+                    maxWidth={15}
                     canvasProps={{
                         width: "300",
                         height: "300",
+                        className: style.signatureCanvas
                     }}
                 />
             </div>
             <div className={style.buttonContainer}>
-                <div className={style.button} onClick={handleSendImage}>
-                    <TbSend />
-                    <div>Send</div>
-                </div>
+                <Button type="submit" callback={handleClick}>Submit</Button>
+                <Button type="remove" callback={deleteCanvas}>Delete</Button>
             </div>
         </>
     );
 };
+
+DrawingComponent.propTypes = {
+    setMNISTResult: PropsTypes.func,
+    setEMNISTResult: PropsTypes.func
+}
 
 export default DrawingComponent;

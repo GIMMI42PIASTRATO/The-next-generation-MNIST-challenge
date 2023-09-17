@@ -2,12 +2,14 @@ import PropsTypes from "prop-types";
 import style from "../style/Description.module.css";
 import Results from "./Results";
 export default function Description({
+    result,
     description,
     children,
     activeStyle,
     icon,
 }) {
     Description.propTypes = {
+        result: PropsTypes.string,
         description: PropsTypes.string,
         children: PropsTypes.string,
         activeStyle: PropsTypes.object,
@@ -29,7 +31,7 @@ export default function Description({
                 <div className={style.description}>{description}</div>
             </div>
 
-            <Results />
+            <Results result={result}/>
         </div>
     );
 }

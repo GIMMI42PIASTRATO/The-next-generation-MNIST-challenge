@@ -12,12 +12,14 @@ export default function InputApi() {
 
     const handleConnectApiN1 = () => {
         console.log(inputValueN1);
-        notify1();
+        themeStateContext.setApiLink1(inputValueN1);
+        notify1(inputValueN1);
     };
 
     const handleConnectApiN2 = () => {
         console.log(inputValueN2);
-        notify1();
+        themeStateContext.setApiLink2(inputValueN2);
+        notify1(inputValueN2);
     };
 
     return (
@@ -30,14 +32,14 @@ export default function InputApi() {
                     {themeStateContext.isClickedN1 ? (
                         <input
                             type="text"
-                            placeholder="http://apilink"
+                            placeholder="http://apilink/"
                             value={inputValueN1}
                             onChange={(e) => setInputValueN1(e.target.value)}
                         />
                     ) : (
                         <input
                             type="text"
-                            placeholder="http://apilink"
+                            placeholder="http://apilink/"
                             value={inputValueN2}
                             onChange={(e) => setInputValueN2(e.target.value)}
                         />

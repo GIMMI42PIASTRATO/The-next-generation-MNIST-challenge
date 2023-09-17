@@ -1,10 +1,11 @@
 import { ThemeContext } from "../App";
 import style from "../style/Results.module.css";
 import { useContext } from "react";
+import PropsTypes from "prop-types";
 
-export default function Results() {
+export default function Results({ result }) {
     const themeStateContext = useContext(ThemeContext);
-
+    
     return (
         <div>
             {themeStateContext.isClickedN1 ? (
@@ -40,8 +41,12 @@ export default function Results() {
                     Interpretation
                 </div>
             )}
-            <div className={style.result}>1</div>
+            <div className={style.result}>{result}</div>
             <div className={style.probability}>with 90% probability</div>
         </div>
     );
+}
+
+Results.propTypes = {
+    result: PropsTypes.string
 }

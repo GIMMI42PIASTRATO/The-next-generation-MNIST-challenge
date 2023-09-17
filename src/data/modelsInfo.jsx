@@ -1,15 +1,15 @@
-import { TbHexagonNumber6, TbSunglasses } from "react-icons/tb";
+import { TbHexagonLetterA, TbHexagonNumber6 } from "react-icons/tb";
 
 const modelsInfo = {
     EMNISTInfo: {
-        text: "EMNIST",
-        icon: TbHexagonNumber6,
+        text: "EMNIST CNN",
+        icon: TbHexagonLetterA,
         color: "#ff4c88",
     },
 
     fashionMNIST: {
-        text: "Fashion-MNIST",
-        icon: TbSunglasses,
+        text: "MNIST Feed-Forward",
+        icon: TbHexagonNumber6,
         color: "#ff6d2e",
     },
 };
